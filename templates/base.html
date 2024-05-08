@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {% endblock %} - Bloggable </title>
+</head>
+<body>
+    <nav>
+        <a href="/">Bloggable</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
