@@ -3,4 +3,4 @@
 </p>
 
 # Bloggable
-Simple blog site using Flask and MySQL.
+Simple blog site using Flask and MySQL (SQLAlchemy).
