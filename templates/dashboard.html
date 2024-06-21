@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %}<b>{{ current_user.username.title() }}'s Dashboard {% endblock %}</b></h1>
+<hr><br>
+<h3>Manage Posts</h3>
+<div class="table-responsive card rounded-2 p-0 m-0">
+	<table class="table table-bordered table-hover rounded-2 overflow-hidden p-0 m-0">
+		<thead>
+			<tr>
+				<th scope="col" class="w-25">Title</th>
+				<th scope="col" class="w-25">Date posted</th>
+				<th scope="col" class="w-25">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in posts %}
+			<tr>
+				<td scope="row">{{ post.title }}</td>
+				<td scope="row">{{ post.date_posted }}</td>
+				<td>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-primary btn-sm" onclick="location.href='/post/{{ post.id }}'">View</button>
+						<button type="button" class="btn btn-warning btn-sm" onclick="location.href='/post/{{ post.id }}/edit'">Edit</button>
+						<button type="button" class="btn btn-danger btn-sm" onclick="location.href='/post/{{ post.id }}/delete'">Delete</button>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

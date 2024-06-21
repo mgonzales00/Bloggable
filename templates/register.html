@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="centered-element">
+   <div class="form-container">
+      <form method="post" action="{{ url_for('register') }}">
+		{{ form.csrf_token }}
+         <h1 style="text-align: center;"><b> {% block title %} Register {% endblock %} </b></h1>
+         <br>
+         <div class="form-group d-grid">
+            <div class="input-group mb-3">
+            	<span class="input-group-text"><i class="fas fa-user"></i></span>
+				{{ form.username(class="form-control", placeholder="Username", autocomplete="off") }}
+            </div>
+            <div class="input-group mb-3">
+               <span class="input-group-text"><i class="fas fa-lock"></i></span>
+			   {{ form.password(class="form-control", placeholder="Password", autocomplete="off") }}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fas fa-check"></i></span>
+                {{ form.confirm_password(class="form-control", placeholder="Confirm password", autocomplete="off") }}
+            </div>
+            {{ form.submit(class="btn btn-primary btn-block") }}
+         </div>
+      </form>
+   </div>
+</div>
+{% endblock %}

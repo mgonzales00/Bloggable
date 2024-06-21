@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} <b>{{ post.title }}</b> {% endblock %}</h1>
+<hr><br>
+<div class="card">
+    <div class="card-header">
+        Posted by {{ post.author }} on {{ post.date_posted }}
+    </div>    
+    <div class="card-body">
+        {{ post.content | safe }}
+    </div>
+</div>
+{% endblock %}

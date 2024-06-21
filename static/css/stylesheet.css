@@ -1,0 +1,36 @@
+body {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar {
+    border-bottom: 1px solid #eeeeee2c;
+    color: #ccc;
+    backdrop-filter: blur(1.5rem);
+}
+
+.centered-element {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eeeeee2c;
+    border-radius: 5px;
+    color: #ccc;
+    backdrop-filter: blur(1.5rem);
+}
+
+.centered-element {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

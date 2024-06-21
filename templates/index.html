@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>{% block title %} Bloggable {% endblock %}</h1>
-    <h3>Welcome!</h3>
-    <p>Welcome to Bloggable!</p>
+<h1>{% block title %} <b>Bloggable</b> {% endblock %}</h1>
+<hr><br> 
+{% for post in posts %}
+<h4>{{ post.title }}</h4>
+<div class="card">
+	<div class="card-header">
+		Posted by {{ post.author }} on {{ post.date_posted }}
+	</div>
+	<div class="card-body">
+		{{ post.content | safe }}
+	</div>
+</div>
+<br>
+{% endfor %}
 {% endblock %}

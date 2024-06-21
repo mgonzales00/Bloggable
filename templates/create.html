@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} <b>Create a post</b> {% endblock %}</h1>
+<hr><br>
+<div class="card">
+    <div class="card-body text-primary">
+        <div class="form-group d-grid">
+            <form method="post" action="{{ url_for('create') }}">
+                {{ form.csrf_token }}
+                {{ form.title(class="form-control", placeholder="Enter title...", autocomplete="off") }}
+                <br>
+                {{ form.body() }}
+                <br>
+                {{ form.submit(class="form-control btn btn-success btn-block") }}
+            </form>
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='body') }}
+        </div>
+    </div>
+</div>
+{% endblock %}
