@@ -3,4 +3,4 @@
 </p>
 
 # Bloggable
-Simple blog site using Flask and MySQL (SQLAlchemy).
+Simple blog site using Flask, Flask-Login, Flask-WTF/WTForms, Flask-CKEditor, Argon2, and SQLAlchemy.
