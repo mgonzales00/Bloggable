@@ -15,4 +15,6 @@ Simple blog site using Flask, Flask-Login, Flask-WTF/WTForms, Flask-CKEditor, Ar
 ![create-a-post](https://github.com/user-attachments/assets/8c357feb-ef57-4ee3-b787-02255fcd8f6b)
 
 ## How to Run
-- Once in a virtual envrionment: `flask run`
+- Once in a virtual envrionment:
+  - `pip install -r requirements.txt`
+  - `flask run`
