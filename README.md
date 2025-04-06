@@ -5,6 +5,13 @@
 # Bloggable
 Simple blog site using Flask, Flask-Login, Flask-WTF/WTForms, Flask-CKEditor, Argon2, and SQLAlchemy.
 
+# Features
+- Secure login
+- Text and image support
+- Create and edit posts
+- Beautiful theming with Bootstrap
+- Animated notifications
+
 ## Managing Posts
 ![manage-posts](https://github.com/user-attachments/assets/a02acc7a-e2b1-46d3-8b80-891eeab9d445)
 
